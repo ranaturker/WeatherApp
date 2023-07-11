@@ -106,8 +106,8 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:layout_marginBottom="561dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -203,24 +203,27 @@
         android:layout_width="24dp"
         android:layout_height="24dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView6"
-        app:srcCompat="@drawable/ic_cloudy_2"
-        tools:layout_editor_absoluteX="193dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_cloudy_2" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="24dp"
         android:layout_height="24dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView7"
-        app:srcCompat="@drawable/ic_sunny_2"
-        tools:layout_editor_absoluteX="193dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_sunny_2" />
 
     <ImageView
         android:id="@+id/imageView7"
         android:layout_width="24dp"
         android:layout_height="24dp"
         app:layout_constraintBottom_toBottomOf="@+id/textView10"
-        app:srcCompat="@drawable/ic_rainy_2"
-        tools:layout_editor_absoluteX="193dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_rainy_2" />
 
     <TextView
         android:id="@+id/textView11"
