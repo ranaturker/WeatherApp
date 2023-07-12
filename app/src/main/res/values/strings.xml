@@ -18,12 +18,12 @@
     <string name="wind">Rüzgar</string>
     <string name="wind_situation">3 km/s</string>
 
-    <string name="weather_situation_image">1</string>
-    <string name="wind_image">1</string>
-    <string name="tuesday_weather">1</string>
-    <string name="wednesday_weather">1</string>
-    <string name="thursday_weather">1</string>
-    <string name="friday_weather">1</string>
+    <string name="weather_situation_image">weather situation image</string>
+    <string name="wind_image">wind image</string>
+    <string name="tuesday_weather">tuesday weather</string>
+    <string name="wednesday_weather">wednesday weather</string>
+    <string name="thursday_weather">thursday weather</string>
+    <string name="friday_weather">friday weather</string>
 
 
 
