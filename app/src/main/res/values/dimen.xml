@@ -5,4 +5,6 @@
     <dimen name="margin_16">16dp</dimen>
     <dimen name="margin_32">32dp</dimen>
     <dimen name="icon_size_large">64dp</dimen>
+    <dimen name="icon_wind">24dp</dimen>
+
 </resources>

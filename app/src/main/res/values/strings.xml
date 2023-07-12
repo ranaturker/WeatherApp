@@ -1,6 +1,30 @@
 <resources>
-    <string name="app_name">task1</string>
+    <string name="app_name">task 1</string>
 
     <string name="tuesday">Sal, 02 Nisan</string>
+    <string name="wednesday">Çar, 03 Nisan</string>
+    <string name="thursday">Per, 04 Nisan</string>
+    <string name="friday">Cum, 05 Nisan</string>
+
+    <string name="tuesday_degree">14° -  27°</string>
+    <string name="wednesday_degree">14° -  27°</string>
+    <string name="thursday_degree">14° -  27°</string>
+    <string name="friday_degree">14° -  27°</string>
+
+    <string name="city">İstanbul</string>
+    <string name="day">Bugün</string>
+    <string name="degree">26°</string>
+    <string name="weather_situation">Güneşli</string>
+    <string name="wind">Rüzgar</string>
+    <string name="wind_situation">3 km/s</string>
+
+    <string name="weather_situation_image">1</string>
+    <string name="wind_image">1</string>
+    <string name="tuesday_weather">1</string>
+    <string name="wednesday_weather">1</string>
+    <string name="thursday_weather">1</string>
+    <string name="friday_weather">1</string>
+
+
 
 </resources>
