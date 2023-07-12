@@ -82,9 +82,8 @@
         android:layout_marginTop="@dimen/margin_32"
         android:fontFamily="sans-serif-medium"
         android:text="@string/city"
-        android:textAllCaps="false"
         android:textColor="@color/color_text"
-        android:textSize="20sp"
+        android:textSize="@dimen/text_size_city"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -114,15 +113,15 @@
 
     <TextView
         android:id="@+id/degree"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_32"
+        android:gravity="center_horizontal"
         android:text="@string/degree"
         android:textColor="@color/color_text"
-        android:textSize="64sp"
+        android:textSize="@dimen/text_size_degree"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.539"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/weather_situation_image" />
 
@@ -134,7 +133,7 @@
         android:fontFamily="sans-serif-medium"
         android:text="@string/weather_situation"
         android:textColor="@color/color_text"
-        android:textSize="16sp"
+        android:textSize="@dimen/text_size_weather"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/degree" />
@@ -160,7 +159,6 @@
         android:text="@string/wind_situation"
         android:textColor="@color/color_text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.539"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/wind" />
 
