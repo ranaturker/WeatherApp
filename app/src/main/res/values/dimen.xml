@@ -6,6 +6,7 @@
     <dimen name="margin_16">16dp</dimen>
     <dimen name="margin_24">24dp</dimen>
     <dimen name="margin_32">32dp</dimen>
+    <dimen name="margin_80">80dp</dimen>
 
     <!--icons-->
     <dimen name="icon_size_large">64dp</dimen>
@@ -15,5 +16,6 @@
     <dimen name="text_size_city">20sp</dimen>
     <dimen name="text_size_degree">64sp</dimen>
     <dimen name="text_size_weather">16sp</dimen>
+    <dimen name="text_size_date">20sp</dimen>
 
 </resources>

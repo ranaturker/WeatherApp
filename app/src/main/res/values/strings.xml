@@ -17,6 +17,7 @@
     <string name="weather_situation">Güneşli</string>
     <string name="wind">Rüzgar</string>
     <string name="wind_situation">3 km/s</string>
+    <string name="date">01 Nisan 2023</string>
 
     <string name="weather_situation_image">weather situation image</string>
     <string name="wind_image">wind image</string>
@@ -24,6 +25,12 @@
     <string name="wednesday_weather">wednesday weather</string>
     <string name="thursday_weather">thursday weather</string>
     <string name="friday_weather">friday weather</string>
+
+    <string name="refresh">refresh</string>
+
+    <string name="button">Verileri Güncelle</string>
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 
