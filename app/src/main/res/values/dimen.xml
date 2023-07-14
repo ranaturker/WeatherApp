@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--margins-->
+    <dimen name="margin_0">0dp</dimen>
     <dimen name="margin_4">4dp</dimen>
     <dimen name="margin_5">5dp</dimen>
     <dimen name="margin_8">8dp</dimen>
@@ -10,8 +11,7 @@
     <dimen name="margin_32">32dp</dimen>
     <dimen name="margin_50">50dp</dimen>
     <dimen name="margin_80">80dp</dimen>
-    <dimen name="margin_90">90dp</dimen>
-    <dimen name="margin_120">120dp</dimen>
+
     <!--icons-->
     <dimen name="icon_size_large">64dp</dimen>
     <dimen name="icon_wind">24dp</dimen>
@@ -21,5 +21,22 @@
     <dimen name="text_size_degree">64sp</dimen>
     <dimen name="text_size_weather">16sp</dimen>
     <dimen name="text_size_date">20sp</dimen>
+    <dimen name="text_size_degreeGap">16sp</dimen>
 
+    <!--card-->
+    <dimen name="cardCornerRadius">16dp</dimen>
+    <dimen name="cardElevation">24dp</dimen>
+
+    <!--card-->
+    <dimen name="padding">8dp</dimen>
+
+    <!--width and height-->
+    <dimen name="width_0">0dp</dimen>
+    <dimen name="height_0">0dp</dimen>
+    <dimen name="width_24">24dp</dimen>
+    <dimen name="height_24">24dp</dimen>
+    <dimen name="width_50">50dp</dimen>
+    <dimen name="height_50">50dp</dimen>
+    <dimen name="width_64">64dp</dimen>
+    <dimen name="height_64">64dp</dimen>
 </resources>
