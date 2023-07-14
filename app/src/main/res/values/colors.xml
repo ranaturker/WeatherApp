@@ -3,4 +3,5 @@
     <color name="color_text">#F7FFFFFF</color>
     <color name="background">#F8000000</color>
     <color name="background_tint">#DC000000</color>
+    <color name="card_background">#101010</color>
 </resources>

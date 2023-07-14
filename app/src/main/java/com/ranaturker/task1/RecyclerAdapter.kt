@@ -1,38 +1,48 @@
 package com.ranaturker.task1
+import androidx.recyclerview.widget.RecyclerView
+import com.ranaturker.task1.databinding.RecyclerViewRowBinding
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
-import androidx.recyclerview.widget.RecyclerView
 
-class RecyclerAdapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
+class RecyclerAdapter(
+    private val cityDataList : ArrayList<WeatherData>,
+    val listener : RecyclerViewEvent
+):
+    RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
+    inner class ViewHolder(val binding : RecyclerViewRowBinding) : RecyclerView.ViewHolder(binding.root), View.OnClickListener {
+        init {
+            binding.weatherSituationImage.setOnClickListener(this)
+        }
+
+        override fun onClick(v: View?) {
+            val position = adapterPosition
+            if (position != RecyclerView.NO_POSITION) {
+                listener.onItemClick(position)
+            }
+        }
+
+    }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val v = LayoutInflater.from(parent.context) .inflate (R. layout.recycler_view_row, parent, false)
-        return ViewHolder (v)
+        val binding = RecyclerViewRowBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+        return ViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: RecyclerAdapter.ViewHolder, position: Int) {
-        TODO("Not yet implemented")
+    override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
+        viewHolder.binding.city.text = cityDataList[position].city
+        viewHolder.binding.degree.text = cityDataList[position].degree
+        viewHolder.binding.weatherSituation.text = cityDataList[position].weatherCondition
+        viewHolder.binding.degreeGap.text = cityDataList[position].degreeGap
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return cityDataList.size
     }
 
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private var itemImage: ImageView
-        private var itemDegree: TextView
-        private var itemCity: TextView
-        private var itemDegreeGap: TextView
-        private var itemWeatherSituation: TextView
-
-        init {
-            itemImage = itemView.findViewById(R.id.weather_situation_image)
-            itemDegree = itemView.findViewById(R.id.degree)
-            itemCity = itemView.findViewById(R.id.city)
-            itemDegreeGap = itemView.findViewById(R.id.degree_gap)
-            itemWeatherSituation = itemView.findViewById(R.id.weather_situation)
-        }
+    interface RecyclerViewEvent{
+        fun onItemClick(position: Int)
     }
+
+
+
 }
