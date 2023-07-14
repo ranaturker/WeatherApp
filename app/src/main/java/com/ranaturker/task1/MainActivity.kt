@@ -27,9 +27,12 @@ class MainActivity : AppCompatActivity(), RecyclerAdapter.RecyclerViewEvent {
         cityDataList.add(ankara)
         cityDataList.add(erzurum)
         cityDataList.add(sakarya)
+        cityDataList.add(istanbul)
+        cityDataList.add(ankara)
+        cityDataList.add(erzurum)
+        cityDataList.add(sakarya)
 
 
-        binding.mRecyclerView.layoutManager = LinearLayoutManager(this)
         val customAdapter = RecyclerAdapter(cityDataList , this)
         binding.mRecyclerView.adapter = customAdapter
 
