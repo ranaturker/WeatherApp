@@ -34,9 +34,9 @@
         app:layout_constraintTop_toBottomOf="@+id/city" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/mRecyclerView"
-        android:layout_width="@dimen/width_0"
-        android:layout_height="@dimen/height_0"
+        android:id="@+id/recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

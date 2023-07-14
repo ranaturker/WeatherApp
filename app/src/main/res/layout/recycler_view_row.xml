@@ -6,15 +6,15 @@
     android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="@dimen/width_0"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_16"
         android:layout_marginTop="@dimen/margin_16"
         android:layout_marginEnd="@dimen/margin_16"
         android:layout_marginBottom="@dimen/margin_16"
         app:cardBackgroundColor="@color/card_background"
-        app:cardCornerRadius="@dimen/cardCornerRadius"
-        app:cardElevation="@dimen/cardElevation"
+        app:cardCornerRadius="@dimen/card_corner_radius"
+        app:cardElevation="@dimen/card_elevation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -32,7 +32,7 @@
             <ImageView
                 android:id="@+id/weather_situation_image"
                 android:layout_width="@dimen/width_50"
-                android:layout_height="@dimen/height_0"
+                android:layout_height="0dp"
                 android:layout_marginEnd="@dimen/margin_24"
                 android:contentDescription="@string/weather_situation_image"
                 app:layout_constraintEnd_toEndOf="parent"

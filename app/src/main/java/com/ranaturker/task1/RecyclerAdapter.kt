@@ -11,16 +11,15 @@ class RecyclerAdapter(
     val listener: RecyclerViewEvent
 ) :
     RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
-    inner class ViewHolder(val binding: RecyclerViewRowBinding) :
-        RecyclerView.ViewHolder(binding.root), View.OnClickListener {
-        init {
-            binding.root.setOnClickListener(this)
-        }
 
-        override fun onClick(v: View?) {
-            val position = adapterPosition
-            if (position != RecyclerView.NO_POSITION) {
-                listener.onItemClick(cityDataList[position])
+    inner class ViewHolder(val binding: RecyclerViewRowBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        init {
+            binding.root.setOnClickListener {
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    listener.onItemClick(cityDataList[position])
+                }
             }
         }
     }
