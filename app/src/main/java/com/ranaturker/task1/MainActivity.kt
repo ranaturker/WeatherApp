@@ -6,7 +6,6 @@ import android.os.Bundle
 import com.ranaturker.task1.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), RecyclerAdapter.RecyclerViewEvent {
-    private lateinit var cityDataList: ArrayList<WeatherData>
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,7 +14,7 @@ class MainActivity : AppCompatActivity(), RecyclerAdapter.RecyclerViewEvent {
         val view = binding.root
         setContentView(view)
 
-        cityDataList = ArrayList()
+       /* cityDataList = ArrayList()
 
         val istanbul = WeatherData("İstanbul", "26°", "14° - 27°", "Güneşli")
         val ankara = WeatherData("Ankara", "25°", "18° - 30°", "Güneşli")
@@ -29,11 +28,14 @@ class MainActivity : AppCompatActivity(), RecyclerAdapter.RecyclerViewEvent {
 
         val customAdapter = RecyclerAdapter(cityDataList, this)
 
-        binding.recyclerView.adapter = customAdapter
+        binding.recyclerView.adapter = customAdapter*/
+        val intent = Intent(this, HomeActivity::class.java)
+
+        startActivity(intent)
     }
 
     override fun onItemClick(data: WeatherData) {
-        val intent = Intent(this, DetailsActivity::class.java)
+        val intent = Intent(this, HomeActivity::class.java)
         intent.putExtra("data", data)
 
         startActivity(intent)

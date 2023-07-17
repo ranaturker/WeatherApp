@@ -3,7 +3,6 @@ package com.ranaturker.task1
 import androidx.recyclerview.widget.RecyclerView
 import com.ranaturker.task1.databinding.RecyclerViewRowBinding
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 
 class RecyclerAdapter(
