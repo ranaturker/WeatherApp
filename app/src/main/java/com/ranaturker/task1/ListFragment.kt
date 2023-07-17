@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
-import com.hercan.weatherapp2.presentation.viewbinding.viewBinding
 import com.ranaturker.task1.databinding.FragmentListBinding
+import viewBinding
 
 class ListFragment : Fragment(R.layout.fragment_list), RecyclerAdapter.RecyclerViewEvent {
     private val binding by viewBinding(FragmentListBinding::bind)
