@@ -14,21 +14,21 @@ class MainActivity : AppCompatActivity(), RecyclerAdapter.RecyclerViewEvent {
         val view = binding.root
         setContentView(view)
 
-       /* cityDataList = ArrayList()
+        /* cityDataList = ArrayList()
 
-        val istanbul = WeatherData("İstanbul", "26°", "14° - 27°", "Güneşli")
-        val ankara = WeatherData("Ankara", "25°", "18° - 30°", "Güneşli")
-        val erzurum = WeatherData("Erzurum", "24°", "26° - 42°", "Güneşli")
-        val sakarya = WeatherData("Sakarya", "23°", "10° - 17°", "Güneşli")
+         val istanbul = WeatherData("İstanbul", "26°", "14° - 27°", "Güneşli")
+         val ankara = WeatherData("Ankara", "25°", "18° - 30°", "Güneşli")
+         val erzurum = WeatherData("Erzurum", "24°", "26° - 42°", "Güneşli")
+         val sakarya = WeatherData("Sakarya", "23°", "10° - 17°", "Güneşli")
 
-        cityDataList.add(istanbul)
-        cityDataList.add(ankara)
-        cityDataList.add(erzurum)
-        cityDataList.add(sakarya)
+         cityDataList.add(istanbul)
+         cityDataList.add(ankara)
+         cityDataList.add(erzurum)
+         cityDataList.add(sakarya)
 
-        val customAdapter = RecyclerAdapter(cityDataList, this)
+         val customAdapter = RecyclerAdapter(cityDataList, this)
 
-        binding.recyclerView.adapter = customAdapter*/
+         binding.recyclerView.adapter = customAdapter*/
         val intent = Intent(this, HomeActivity::class.java)
 
         startActivity(intent)

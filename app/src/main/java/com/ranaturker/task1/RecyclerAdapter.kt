@@ -1,5 +1,6 @@
 package com.ranaturker.task1
 
+import android.provider.Settings.Global.getString
 import androidx.recyclerview.widget.RecyclerView
 import com.ranaturker.task1.databinding.RecyclerViewRowBinding
 import android.view.LayoutInflater
@@ -37,9 +38,14 @@ class RecyclerAdapter(
             degree.text = cityDataList[position].degree
             weatherSituation.text = cityDataList[position].weatherCondition
             degreeGap.text = cityDataList[position].degreeGap
+            when (cityDataList[position]?.weatherCondition) {
+                "Güneşli"-> weatherSituationImage.setImageResource(R.drawable.ic_sunny_2)
+                "Bulutlu" -> weatherSituationImage.setImageResource(R.drawable.ic_cloudy_2)
+                "Yağmurlu" -> weatherSituationImage.setImageResource(R.drawable.ic_rainy_2)
+                "Karlı" -> weatherSituationImage.setImageResource(R.drawable.ic_snowy_2)
+            }
         }
     }
-
     override fun getItemCount(): Int {
         return cityDataList.size
     }

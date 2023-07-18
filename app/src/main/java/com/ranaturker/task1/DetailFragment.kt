@@ -12,6 +12,7 @@ class DetailFragment : Fragment() {
         arguments?.let {
         }
     }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -20,4 +21,4 @@ class DetailFragment : Fragment() {
         // Create the detail view and set the data
         return inflater.inflate(R.layout.fragment_detail, container, false)
     }
-            }
+}
