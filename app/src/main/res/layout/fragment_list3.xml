@@ -3,14 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListFragment3">
+    tools:context=".task3.ListFragment3">
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/FragmentList3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/background_tint"
-        tools:context=".ListFragment"
-        android:id="@+id/FragmentList3">
+        tools:context=".task2.ListFragment">
 
         <TextView
             android:id="@+id/city"

@@ -1,8 +1,11 @@
-package com.ranaturker.task1
+package com.ranaturker.task1.task2
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import com.ranaturker.task1.R
+import com.ranaturker.task1.RecyclerAdapter
+import com.ranaturker.task1.WeatherData
 import com.ranaturker.task1.databinding.FragmentListBinding
 import viewBinding
 
@@ -28,19 +31,14 @@ class ListFragment : Fragment(R.layout.fragment_list), RecyclerAdapter.RecyclerV
         val customAdapter = RecyclerAdapter(cityDataList, this)
 
         binding.recyclerView.adapter = customAdapter
-
     }
 
     override fun onItemClick(data: WeatherData) {
-       /* val bundle = Bundle()
+        val bundle = Bundle()
         bundle.putParcelable("WeatherData", data)
         val detailFragment = DetailFragment()
         detailFragment.arguments = bundle
-        parentFragmentManager.commit {
-            setReorderingAllowed(true)
-            replace(R.id.fragment, detailFragment)
-            addToBackStack("detailFragment")
-        }*/
+        parentFragmentManager.beginTransaction().add(R.id.container, detailFragment).commit()
     }
 }
 

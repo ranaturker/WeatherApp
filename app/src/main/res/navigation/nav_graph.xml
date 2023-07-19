@@ -6,7 +6,7 @@
     app:startDestination="@id/listFragment3">
     <fragment
         android:id="@+id/detailFragment3"
-        android:name="com.ranaturker.task1.DetailFragment3"
+        android:name="com.ranaturker.task1.task3.DetailFragment3"
         android:label="fragment_detail3"
         tools:layout="@layout/fragment_detail3" >
         <argument
@@ -16,11 +16,11 @@
     </fragment>
     <fragment
         android:id="@+id/listFragment3"
-        android:name="com.ranaturker.task1.ListFragment3"
+        android:name="com.ranaturker.task1.task3.ListFragment3"
         android:label="fragment_list3"
         tools:layout="@layout/fragment_list3" >
         <action
-            android:id="@+id/action_listFragment3_to_detailFragment3"
+            android:id="@+id/to_detailFragment3"
             app:destination="@id/detailFragment3" />
     </fragment>
 </navigation>

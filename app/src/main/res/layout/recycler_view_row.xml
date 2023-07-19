@@ -35,9 +35,9 @@
                 android:layout_height="0dp"
                 android:layout_marginEnd="@dimen/margin_24"
                 android:contentDescription="@string/weather_situation_image"
+                app:layout_constraintBottom_toBottomOf="@id/degree"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@id/degree"
-                app:layout_constraintBottom_toBottomOf="@id/degree"
                 app:srcCompat="@drawable/ic_sunny_2" />
 
             <TextView
@@ -92,11 +92,11 @@
                 android:layout_marginBottom="@dimen/margin_8"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/tuesday_degree"
-                android:textSize="@dimen/text_size_degreeGap"
                 android:textColor="@color/color_text"
+                android:textSize="@dimen/text_size_degreeGap"
                 app:layout_constraintBottom_toTopOf="@+id/city"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/degree"/>
+                app:layout_constraintTop_toBottomOf="@+id/degree" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

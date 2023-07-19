@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    android:backgroundTint="@color/background_tint"
-    tools:context=".HomeActivity">
+    tools:context=".task1.HomeActivity">
 
     <TextView
         android:id="@+id/friday_degree"

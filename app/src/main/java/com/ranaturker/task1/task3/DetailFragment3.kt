@@ -1,9 +1,11 @@
-package com.ranaturker.task1
+package com.ranaturker.task1.task3
 
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.ranaturker.task1.R
+import com.ranaturker.task1.WeatherData
 import com.ranaturker.task1.databinding.FragmentDetail3Binding
 import viewBinding
 
@@ -17,25 +19,26 @@ class DetailFragment3 : Fragment(R.layout.fragment_detail3) {
         arguments.let {
             weatherData = it?.let {
                 DetailFragment3Args.fromBundle(it).weatherData
-
-
             }
-            binding.city.text = weatherData?.city
-            binding.degree.text = weatherData?.degree
-            binding.weatherSituation.text = weatherData?.weatherCondition
-            when (weatherData?.weatherCondition) {
-                getString(R.string.sunny) -> binding.weatherSituationImage.setImageResource(R.drawable.ic_sunny_2)
-                "Bulutlu" -> binding.weatherSituationImage.setImageResource(R.drawable.ic_cloudy_2)
-                "Yağmurlu" -> binding.weatherSituationImage.setImageResource(R.drawable.ic_rainy_2)
-                "Karlı" -> binding.weatherSituationImage.setImageResource(R.drawable.ic_snowy_2)
-            }
+            with(binding) {
+                city.text = weatherData?.city
+                degree.text = weatherData?.degree
+                weatherSituation.text = weatherData?.weatherCondition
 
-            binding.refresh.setOnClickListener {
-                updateTemperature()
+                when (weatherData?.weatherCondition) {
+                    getString(R.string.sunny) -> weatherSituationImage.setImageResource(R.drawable.ic_sunny_2)
+                    "Bulutlu" -> weatherSituationImage.setImageResource(R.drawable.ic_cloudy_2)
+                    "Yağmurlu" -> weatherSituationImage.setImageResource(R.drawable.ic_rainy_2)
+                    "Karlı" -> weatherSituationImage.setImageResource(R.drawable.ic_snowy_2)
+                }
 
-            }
-            binding.button.setOnClickListener {
-                sendData()
+                refresh.setOnClickListener {
+                    updateTemperature()
+
+                }
+                button.setOnClickListener {
+                    sendData()
+                }
             }
         }
     }
@@ -53,14 +56,12 @@ class DetailFragment3 : Fragment(R.layout.fragment_detail3) {
         }
         binding.degree.text = randomTemperature.toString() + "°"
         weatherData?.degree = randomTemperature.toString() + "°"
-
     }
 
     private fun sendData() {
         if (randomTemperature != null) {
             val bundle = Bundle()
             bundle.putParcelable("degree", weatherData)
-            // Fragment Result API'yi kullanarak verileri güncelle ve son random sıcaklık değerini geri gönder
             parentFragmentManager.setFragmentResult(
                 "degreeKey",
                 bundle

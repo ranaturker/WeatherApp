@@ -1,11 +1,13 @@
-package com.ranaturker.task1
+package com.ranaturker.task1.task3
 
 import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
-import androidx.fragment.app.FragmentResultListener
 import androidx.navigation.fragment.findNavController
+import com.ranaturker.task1.R
+import com.ranaturker.task1.RecyclerAdapter
+import com.ranaturker.task1.WeatherData
 import com.ranaturker.task1.databinding.FragmentList3Binding
 import viewBinding
 
@@ -33,31 +35,29 @@ class ListFragment3 : Fragment(R.layout.fragment_list3), RecyclerAdapter.Recycle
 
         binding.recyclerView.adapter = customAdapter
 
-        parentFragmentManager.setFragmentResultListener("degreeKey", this,
-            FragmentResultListener { requestKey, result ->
-                weatherData = if (Build.VERSION.SDK_INT >= 33) {
-                    result.getParcelable("degree", WeatherData::class.java)
-                } else {
-                    result.getParcelable("degree")
-                }
-                weatherData?.let {
-                    var weatherIndex = 0
-                    cityDataList.forEachIndexed { index, data ->
-                        if (data.city == weatherData?.city) {
-                            weatherIndex = index
-                        }
+        parentFragmentManager.setFragmentResultListener(
+            "degreeKey", this
+        ) { requestKey, result ->
+            weatherData = if (Build.VERSION.SDK_INT >= 33) {
+                result.getParcelable("degree", WeatherData::class.java)
+            } else {
+                result.getParcelable("degree")
+            }
+            weatherData?.let {
+                var weatherIndex = 0
+                cityDataList.forEachIndexed { index, data ->
+                    if (data.city == weatherData?.city) {
+                        weatherIndex = index
                     }
-                    cityDataList.set(weatherIndex, weatherData!!)
-
-
                 }
-            })
-
+                cityDataList.set(weatherIndex, it)
+            }
+        }
     }
 
     override fun onItemClick(data: WeatherData) {
         findNavController().navigate(
-            ListFragment3Directions.actionListFragment3ToDetailFragment3(
+            ListFragment3Directions.toDetailFragment3(
                 data
             )
         )
