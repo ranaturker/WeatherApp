@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailFragment3">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:backgroundTint="@color/background_tint"
+        tools:context=".HomeActivity"
+        android:id="@+id/FragmentDetail3">
+
+        <TextView
+            android:id="@+id/friday_degree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_24"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/friday_degree"
+            android:textColor="@color/color_text"
+            app:layout_constraintBottom_toBottomOf="@+id/friday_weather"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/thursday_degree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_24"
+            android:layout_marginBottom="@dimen/margin_16"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/thursday_degree"
+            android:textColor="@color/color_text"
+            app:layout_constraintBottom_toTopOf="@+id/friday_degree"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/wednesday_degree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_24"
+            android:layout_marginBottom="@dimen/margin_16"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/wednesday_degree"
+            android:textColor="@color/color_text"
+            app:layout_constraintBottom_toTopOf="@+id/thursday_degree"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/friday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginBottom="@dimen/margin_32"
+            android:text="@string/friday"
+            android:textColor="@color/color_text"
+            app:layout_constraintBottom_toTopOf="@id/button"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/thursday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginBottom="@dimen/margin_16"
+            android:text="@string/thursday"
+            android:textColor="@color/color_text"
+            app:layout_constraintBottom_toTopOf="@+id/friday"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/wednesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginBottom="@dimen/margin_16"
+            android:text="@string/wednesday"
+            android:textColor="@color/color_text"
+            app:layout_constraintBottom_toTopOf="@+id/thursday"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/city"
+            android:textColor="@color/color_text"
+            android:textSize="@dimen/text_size_city"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/day"
+            android:textColor="@color/color_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/city" />
+
+        <ImageView
+            android:id="@+id/weather_situation_image"
+            android:layout_width="@dimen/width_64"
+            android:layout_height="@dimen/height_64"
+            android:layout_marginTop="@dimen/margin_32"
+            android:contentDescription="@string/weather_situation_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/day"
+            app:srcCompat="@drawable/ic_sunny_2" />
+
+        <TextView
+            android:id="@+id/degree"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_32"
+            android:gravity="center_horizontal"
+            android:text="@string/degree"
+            android:textColor="@color/color_text"
+            android:textSize="@dimen/text_size_degree"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/weather_situation_image" />
+
+        <TextView
+            android:id="@+id/weather_situation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/weather_situation"
+            android:textColor="@color/color_text"
+            android:textSize="@dimen/text_size_weather"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/degree" />
+
+        <TextView
+            android:id="@+id/wind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_32"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/wind"
+            android:textColor="@color/color_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/weather_situation" />
+
+        <TextView
+            android:id="@+id/wind_situation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:fontFamily="sans-serif"
+            android:text="@string/wind_situation"
+            android:textColor="@color/color_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/wind" />
+
+        <ImageView
+            android:id="@+id/wind_image"
+            android:layout_width="@dimen/width_24"
+            android:layout_height="@dimen/height_24"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginEnd="@dimen/margin_4"
+            android:contentDescription="@string/wind_image"
+            app:layout_constraintEnd_toStartOf="@+id/wind_situation"
+            app:layout_constraintTop_toBottomOf="@+id/wind"
+            app:srcCompat="@drawable/ic_wind_2" />
+
+        <TextView
+            android:id="@+id/tuesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_24"
+            android:layout_marginBottom="@dimen/margin_16"
+            android:text="@string/tuesday"
+            android:textColor="@color/color_text"
+            app:layout_constraintBottom_toTopOf="@+id/wednesday"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/tuesday_weather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/tuesday_weather"
+            app:layout_constraintBottom_toBottomOf="@+id/tuesday"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_sunny_2" />
+
+
+        <ImageView
+            android:id="@+id/wednesday_weather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/wednesday_weather"
+            app:layout_constraintBottom_toBottomOf="@+id/wednesday"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_cloudy_2" />
+
+        <ImageView
+            android:id="@+id/thursday_weather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/thursday_weather"
+            app:layout_constraintBottom_toBottomOf="@+id/thursday"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_sunny_2" />
+
+        <ImageView
+            android:id="@+id/friday_weather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/friday_weather"
+            app:layout_constraintBottom_toBottomOf="@+id/friday"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_rainy_2" />
+
+        <TextView
+            android:id="@+id/tuesday_degree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_24"
+            android:layout_marginBottom="@dimen/margin_16"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/tuesday_degree"
+            android:textColor="@color/color_text"
+            app:layout_constraintBottom_toTopOf="@+id/wednesday_degree"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_16"
+            android:contentDescription="@string/refresh"
+            app:layout_constraintBottom_toTopOf="@+id/city"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_refresh" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_16"
+            android:text="@string/button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

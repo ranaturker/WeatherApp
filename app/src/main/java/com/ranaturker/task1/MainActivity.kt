@@ -28,16 +28,15 @@ class MainActivity : AppCompatActivity(), RecyclerAdapter.RecyclerViewEvent {
 
          val customAdapter = RecyclerAdapter(cityDataList, this)
 
-         binding.recyclerView.adapter = customAdapter*/
-        val intent = Intent(this, HomeActivity::class.java)
+         binding.recyclerView.adapter = customAdapter */
 
+        val intent = Intent(this, HomeActivity::class.java)
         startActivity(intent)
     }
 
     override fun onItemClick(data: WeatherData) {
         val intent = Intent(this, HomeActivity::class.java)
         intent.putExtra("data", data)
-
         startActivity(intent)
     }
 }

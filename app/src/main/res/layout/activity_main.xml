@@ -7,6 +7,7 @@
     android:background="@color/background_tint"
     tools:context=".MainActivity">
 
+
     <TextView
         android:id="@+id/city"
         android:layout_width="wrap_content"
