@@ -34,11 +34,11 @@ class ListFragment : Fragment(R.layout.fragment_list), RecyclerAdapter.RecyclerV
     }
 
     override fun onItemClick(data: WeatherData) {
-        val bundle = Bundle()
+      /*  val bundle = Bundle()
         bundle.putParcelable("WeatherData", data)
         val detailFragment = DetailFragment()
         detailFragment.arguments = bundle
-        parentFragmentManager.beginTransaction().add(R.id.container, detailFragment).commit()
+        parentFragmentManager.beginTransaction().add(R.id.container, detailFragment).commit()*/
     }
 }
 
