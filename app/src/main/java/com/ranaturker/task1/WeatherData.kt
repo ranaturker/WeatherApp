@@ -1,9 +1,12 @@
 package com.ranaturker.task1
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
-data class WeatherData  (
-    val city : String,
-    val degree : String,
-    val degreeGap : String,
-    val weatherCondition : String,
-)
+@Parcelize
+data class WeatherData(
+    val city: String,
+    var degree: String,
+    val degreeGap: String,
+    val weatherCondition: String,
+) : Parcelable

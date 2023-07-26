@@ -29,9 +29,12 @@
     <string name="refresh">refresh</string>
 
     <string name="button">Verileri Güncelle</string>
-<!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="sunny">Güneşli</string>
+    <string name="windy">Rüzgarlı</string>
+    <string name="rainy">Yağmurlu</string>
+    <string name="snowy">Karlı</string>
 
 
 </resources>
